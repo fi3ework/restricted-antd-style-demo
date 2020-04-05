@@ -1,0 +1,1 @@
+https://registry.npm.taobao.org
