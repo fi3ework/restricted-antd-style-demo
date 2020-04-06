@@ -279,7 +279,7 @@ module.exports = function (webpackEnv) {
         .map((ext) => `.${ext}`)
         .filter((ext) => useTypeScript || !ext.includes('ts')),
       alias: {
-        'antd/dist/antd.less$': path.resolve(__dirname, '../src/custom-dist.less'),
+        // 'antd/dist/antd.less$': path.resolve(__dirname, '../src/custom-dist.less'),
         // base: path.resolve(__dirname, '../src/custom-dist.less'),
         // Support React Native Web
         // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
@@ -360,6 +360,13 @@ module.exports = function (webpackEnv) {
                 customize: require.resolve('babel-preset-react-app/webpack-overrides'),
 
                 plugins: [
+                  // [
+                  //   'import',
+                  //   {
+                  //     libraryName: 'antd',
+                  //     style: true, // or 'css'
+                  //   },
+                  // ],
                   [
                     require.resolve('babel-plugin-named-asset-import'),
                     {

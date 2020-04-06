@@ -1,10 +1,9 @@
 import React from 'react'
 import { Button, Radio, Row, Col } from 'antd'
 import { ModalDemo } from './modal'
-// import './a.less'
-// import 'antd/dist/antd.less'
+import { CheckboxDemo } from './checkbox'
 import 'antd/dist/antd.less'
-// import 'antd/dist/antd.css'
+import './custom-base.less'
 import './App.css'
 
 function App() {
@@ -12,6 +11,7 @@ function App() {
     <div className="App">
       <div style={{ padding: 50 }}>
         <a href="//github.com">normal link</a>
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
       </div>
       <div style={{ padding: 50 }}>
         <Row gutter={[16, 16]}>
@@ -32,6 +32,11 @@ function App() {
         <Row gutter={[16, 16]}>
           <Col>
             <ModalDemo />
+          </Col>
+        </Row>
+        <Row gutter={[16, 16]}>
+          <Col>
+            <CheckboxDemo />
           </Col>
         </Row>
       </div>
